@@ -1,0 +1,115 @@
+전세계 OS 비율
+
+
+option = {
+  title: {
+    text: '전 세계 운영체제 시장 점유율',
+    subtext: '2025년 2월',
+    left: 'center'
+  },
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: [
+    {
+      orient: 'horizontal',   // 가로로 배치
+      left: 'center',          // 가운데 정렬
+      top: '93%',               // 차트 상단에 위치
+      itemWidth: 20,           // 아이템 너비
+      itemHeight: 10,          // 아이템 높이
+      data: ['Android', 'Windows', 'iOS'] // 상위 3개 항목
+    },
+    {
+      orient: 'horizontal',   // 가로로 배치
+      left: 'center',          // 가운데 정렬
+      bottom: '0%',            // 차트 아래에 위치
+      itemWidth: 20,           // 아이템 너비
+      itemHeight: 10,          // 아이템 높이
+      data: ['macOS', 'Unknown', 'Linux', 'Others'] // 하위 4개 항목
+    }
+  ],
+  series: [
+    {
+      name: '전체 비율',
+      type: 'pie',
+      radius: '70%',
+      center: ['50%', '53%'], // 원 그래프를 아래로 이동
+      data: [
+        { 
+          value: 45.49, 
+          name: 'Android', 
+          label: { 
+            show: true, 
+            position: 'inner', 
+            color: '#fff', 
+            fontSize: 25, 
+            fontWeight: 'bold', 
+            textBorderColor: '#000', 
+            textBorderWidth: 2, 
+            formatter: '{b}\n{d}%' 
+          }
+        },
+        { 
+          value: 25.35, 
+          name: 'Windows', 
+          label: { 
+            show: true, 
+            position: 'inner', 
+            color: '#fff', 
+            fontSize: 20, 
+            fontWeight: 'bold', 
+            textBorderColor: '#000', 
+            textBorderWidth: 2, 
+            formatter: '{b}\n{d}%' 
+          }
+        },
+        { 
+          value: 18.26, 
+          name: 'iOS', 
+          label: { 
+            show: true, 
+            position: 'inner', 
+            color: '#fff', 
+            fontSize: 20, 
+            fontWeight: 'bold', 
+            textBorderColor: '#000', 
+            textBorderWidth: 2, 
+            formatter: '{b}\n{d}%' 
+          }
+        },
+        { 
+          value: 5.67, 
+          name: 'macOS', 
+          label: { show: true, position: 'outside', formatter: '{b}: {d}%' }
+        },
+        { 
+          value: 2.97, 
+          name: 'Unknown', 
+          label: { show: true, position: 'outside', formatter: '{b}: {d}%' }
+        },
+        {
+          value: 1.38, 
+          name: 'Linux', 
+          label: { show: true, position: 'outside', formatter: '{b}: {d}%' },
+          itemStyle: {
+            color: '#DDA0DD' // 자두
+          }
+        },
+        { 
+          value: 0.88,  // Others 항목 추가
+          name: 'Others', 
+          label: { show: true, position: 'outside', formatter: '{b}: {d}%' },
+          itemStyle: {
+            color: '#808080' // 회색
+          }
+        }
+      ],
+      emphasis: {
+        itemStyle: {
+          shadowOffsetX: 0,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }
+  ]
+};
